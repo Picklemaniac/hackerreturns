@@ -1,5 +1,5 @@
 /*
-* This might be the absolute worst code I have ever written.
+* This might be the worst code I have ever written.
 * Nothing here will help you with solving the weekly.
 */
 
@@ -25,45 +25,105 @@ ACTIVATING: LAB LAB LAB LAB LAB LAB  - PROTOCOL;
 PERIODIC REACTIVATION RUNNING;
 `;
 
-const puzzle3_content = `
-NOW ENCRYPTING;
-TERMINATION NEARING COMPLETION;
-HOME SERVER CRASHING;
-
-9c918901552167478afe55e04ed5fb9005ccea5ed61f5d440
-9feb9466720c311f622576c7d40d972507aa3df98bb36
-c30b378bb3c2ccce1075f02bffb5db511a
+const l1 = `
+FINAL SERVER DELETION 1
+;
+;
+torun
+;
+🠗
+;
+kutno
+;
+🠗
+;
+konin
+;
+🠗
+;
+skusk
+;
+🠗
+;
+kowal
+;
+;
+DELETED SUCCESFULLY
 `;
 
-const puzzle4_content = `
-NOW ENCRYPTING;
-TERMINATION NEARING COMPLETION;
-HOME SERVER CRASHING;
-
-9c918901552167478afe55e04ed5fb9005ccea5ed61f5d440
-9feb9466720c311f622576c7d40d972507aa3df98bb36
-c30b378bb3c2ccce1075f02bffb5db511a
+const l2 = `
+FINAL SERVER DELETION 2
+;
+;
+manchester
+;
+🠗
+;
+stoke on trent 
+;
+🠗
+;
+nottingham
+;
+🠗
+;
+sheffield 
+;
+🠗
+;
+manchester
+;
+;
+DELETED SUCCESFULLY
 `;
 
-const puzzle5_content = `
-ACTIVATING: H OO - PROTOCOL;
-ACTIVATING: HIO HIO HIO - PROTOCOL; 
-ACTIVATING: LIO LIO - PROTOCOL; 
-ACTIVATING: LAB LAB LAB LAB LAB LAB  - PROTOCOL; 
-;;;
-PERIODIC REACTIVATION RUNNING;
+const l3 = `
+FINAL SERVER DELETION 3
+;
+;
+beaumont-sur-sarthe 
+;
+🠗
+;
+le mans 
+;
+🠗
+;
+courcebœufs 
+;
+🠗
+;
+champagné  
+;
+🠗
+;
+saint-célerin 
+;
+;
+DELETED SUCCESFULLY
 `;
 
-const puzzle6_content = `
-ACTIVATING: H OO - PROTOCOL;
-ACTIVATING: HIO HIO HIO - PROTOCOL; 
-ACTIVATING: LIO LIO - PROTOCOL; 
-ACTIVATING: LAB LAB LAB LAB LAB LAB  - PROTOCOL; 
-;;;
-PERIODIC REACTIVATION RUNNING;
+const l4 = `
+FINAL SERVER DELETION 4
+;
+;
+aachen  
+;
+🠗
+;
+wurselen  
+;
+🠗
+;
+brand 
+;
+🠗
+;
+donnerberg
+;
+;
+DELETED SUCCESFULLY
 `;
-
-
 
 countdown = () => {
     time -= 1;
@@ -316,18 +376,20 @@ puzzle2 = async () => {
 }
 
 puzzle3 = async () => {
-    document.getElementById("terminal-right").innerHTML = "";
+    document.getElementById("consoleright").innerHTML = "";
+}
+
+puzzle4 = async () => {
+    document.getElementById("consoleright").innerHTML = "";
     document.getElementById("leftimg").src = "img/blink.gif";
 
-    // let gen = document.createElement("img")
-    // gen.className = "rightimg";
-    // gen.id = "rightimg";
-    // gen.src = "img/err.gif";
-    // document.getElementById("terminal-right").appendChild(gen);
-
+    let gen = document.createElement("img")
+    gen.className = "rightimg";
+    gen.id = "rightimg";
+    gen.src = "img/unrelatedeffect.gif";
+    document.getElementById("terminal-right").appendChild(gen);
 
     await new Promise(r => setTimeout(r, 1500));
-
 
     bli = 1;
 
@@ -335,7 +397,7 @@ puzzle3 = async () => {
 
         if (bli < 4){
             document.getElementById("leftimg").src = "img/1.jpg";
-                await new Promise(r => setTimeout(r, 400));
+            await new Promise(r => setTimeout(r, 400));
             document.getElementById("leftimg").src = "img/blink.gif";
             await new Promise(r => setTimeout(r, 200));
             bli++
@@ -373,20 +435,110 @@ puzzle3 = async () => {
     }
 
     blinker()
-
-}
-
-puzzle4 = async () => {
-    document.getElementById("terminal-right").innerHTML = "";
-
 }
 
 puzzle5 = async () => {
-    document.getElementById("terminal-right").innerHTML = "";
+    document.getElementById("consoleright").innerHTML = "";
+    document.getElementById("leftimg").src = ".gif";
 
 }
 
 puzzle6 = async () => {
-    document.getElementById("terminal-right").innerHTML = "";
+    document.getElementById("consoleright").innerHTML = "";
+    document.getElementById("rightimg").remove();
+    await new Promise(r => setTimeout(r, 1000));
+
+    i = 0;
+
+    ltype = 0;
+
+    let l1type = async () => {
+        if (ltype === 0) {
+            if (i < l1.length) {
+                if (l1.charAt(i) === ";") {
+                    document.getElementById("consoleright").innerHTML += "<br>";
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+                else {
+                    document.getElementById("consoleright").innerHTML += l1.charAt(i);
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+            }
+            else {
+                i = 0;
+                ltype += 1;
+                await new Promise(r => setTimeout(r, 1000));
+                document.getElementById("consoleright").innerHTML = "";
+                l1type()
+            }
+        }
+        else if (ltype === 1) {
+            if (i < l2.length) {
+                if (l2.charAt(i) === ";") {
+                    document.getElementById("consoleright").innerHTML += "<br>";
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+                else {
+                    document.getElementById("consoleright").innerHTML += l2.charAt(i);
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+            }
+            else {
+                i = 0;
+                ltype += 1;
+                await new Promise(r => setTimeout(r, 1000));
+                document.getElementById("consoleright").innerHTML = "";
+                l1type()
+            }
+        }
+        else if (ltype === 2) {
+            if (i < l3.length) {
+                if (l3.charAt(i) === ";") {
+                    document.getElementById("consoleright").innerHTML += "<br>";
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+                else {
+                    document.getElementById("consoleright").innerHTML += l3.charAt(i);
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+            }
+            else {
+                i = 0;
+                ltype += 1;
+                await new Promise(r => setTimeout(r, 1000));
+                document.getElementById("consoleright").innerHTML = "";
+                l1type()
+            }
+        }
+        else if (ltype === 3) {
+            if (i < l4.length) {
+                if (l4.charAt(i) === ";") {
+                    document.getElementById("consoleright").innerHTML += "<br>";
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+                else {
+                    document.getElementById("consoleright").innerHTML += l4.charAt(i);
+                    i++;
+                    setTimeout(l1type, 20);
+                }
+            }
+            else {
+                i = 0;
+                ltype += 1;
+                await new Promise(r => setTimeout(r, 2000));
+                document.getElementById("consoleright").innerHTML = "";
+                l1type()
+            }
+        }
+    }
+
+    l1type();
 
 }
