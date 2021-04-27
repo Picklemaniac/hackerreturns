@@ -1,0 +1,160 @@
+/* ==========================================================================
+   This has absolutely nothing to do with the weekly.
+   Yes, I know it's a mess.
+   ========================================================================== */
+
+html {
+    color: #fff;
+    font: 17px/1.4 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color:black;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.greenbtn {
+    border-color: #4CAF50;
+    color: green;
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.greenbtn:hover{
+    color: #4CAF50;
+}
+
+.main {
+    background-size: cover;
+    background: url('../img/terminal_improved_resized.png') no-repeat center center;
+    height: 1024px;
+    width: 100%;
+}
+.terminal {
+    margin-left: -250px;
+    background-color: black;
+    width: 500px;
+    height: 380px;
+    position: absolute;
+    top:  220px;
+    left: 50%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    color:green;
+}
+
+.terminal-left {
+    margin-left: -575px;
+    background-color: black;
+    width: 250px;
+    height: 380px;
+    position: absolute;
+    top:  220px;
+    left: 50%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    color:red;
+}
+
+.terminal-right {
+    margin-left: 330px;
+    background-color: black;
+    width: 250px;
+    height: 380px;
+    position: absolute;
+    top:  220px;
+    left: 50%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    color:red;
+}
+
+.terminal-bottom {
+    margin: 0px;
+}
+
+#countdown {
+    font-size: 30px;
+}
+
+hr {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 2px 1px green;
+}
+
+input {
+    border-color: red;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.leftimg {
+    margin-top: 50px;
+    width: 80%;
+    opacity: 75%;
+}
+
+.rightimg {
+    width: 100%;
+    height: 100%;
+    opacity: 75%;
+}
+
+h2 {
+    color: red;
+}
+
+h5{
+    color: red;
+}
+
+.loader {
+    color: grey;
+    font-family: sans-serif;
+    height: 5vh;
+    left: 50%;
+    overflow-x: hidden;
+    padding-top: 7vh;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+}
+.loader:before {
+    animation: left-to-right 3s alternate infinite linear;
+    background-image: linear-gradient(to right, transparent, red, transparent);
+    content: "";
+    height: 5vh;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.loader:after {
+    background-image: repeating-linear-gradient(90deg, white, white 1vw, transparent 1vw, transparent 10vw);
+    content: "";
+    height: 5vh;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
