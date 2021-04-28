@@ -20,10 +20,15 @@ hio hio hio = hio3 = Iodic acid
 lio lio = lio2 - lithium superoxide
 lab lab lab lab lab lab = LaB6 = Lanthanum broide
 
-3. Family tree and pictures of famous people nth letters again
+3. Binary with leap years convert to decimal then to A1Z26
 
 not
 
+n = 1110 = [1872][2084][2032][1930]
+o = 1111 = [2392][2000][1984][2400]
+t = 10100 = [2188][1994][2016][2134][1950]
+
+bi -> de | Encrypting....
 
 
 4. Album covers flashing indicating the right letter. (Bat out of hell flashes 4 times = o for example)

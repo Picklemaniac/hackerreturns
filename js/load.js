@@ -25,6 +25,19 @@ ACTIVATING: LAB LAB LAB LAB LAB LAB  - PROTOCOL;
 PERIODIC REACTIVATION RUNNING;
 `;
 
+const puzzle3_content = `
+bi -> de | Encrypting....
+;;
+[1872][2084][2032][1930]
+;;
+[2392][2000][1984][2400]
+;;
+[2188][1994][2016][2134][1950]
+;;
+
+Encryption process finished....
+`;
+
 const l1 = `
 FINAL SERVER DELETION 1
 ;
@@ -128,7 +141,6 @@ DELETED SUCCESFULLY
 countdown = () => {
     time -= 1;
     document.getElementById("countdown").innerText = time;
-    setTimeout(countdown, 1000)
 
     if (time === 100) {
         puzzle2()
@@ -148,6 +160,11 @@ countdown = () => {
     if (time === 0) {
         alert("Time is up!")
         return;
+    }
+
+    if (time > 0)
+    {
+        setTimeout(countdown, 1000)
     }
 }
 
@@ -377,6 +394,28 @@ puzzle2 = async () => {
 
 puzzle3 = async () => {
     document.getElementById("consoleright").innerHTML = "";
+    document.getElementById("leftimg").src = "img/frog.gif";
+
+    await new Promise(r => setTimeout(r, 2000));
+
+    i = 0;
+
+    let typer = () => {
+        if (i < puzzle3_content.length) {
+            if (puzzle3_content.charAt(i) === ";") {
+                document.getElementById("consoleright").innerHTML += "<br>";
+                i++;
+                setTimeout(typer, 50);
+            }
+            else {
+                document.getElementById("consoleright").innerHTML += puzzle3_content.charAt(i);
+                i++;
+                setTimeout(typer, 50);
+            }
+        }
+    }
+
+    typer()
 }
 
 puzzle4 = async () => {
@@ -439,13 +478,15 @@ puzzle4 = async () => {
 
 puzzle5 = async () => {
     document.getElementById("consoleright").innerHTML = "";
-    document.getElementById("leftimg").src = ".gif";
+    document.getElementById("rightimg").remove();
+    document.getElementById("leftimg").src = "";
+
 
 }
 
 puzzle6 = async () => {
     document.getElementById("consoleright").innerHTML = "";
-    document.getElementById("rightimg").remove();
+    document.getElementById("leftimg").src = "img/walk.gif";
     await new Promise(r => setTimeout(r, 1000));
 
     i = 0;
