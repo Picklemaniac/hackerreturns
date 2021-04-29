@@ -1,0 +1,564 @@
+@-webkit-keyframes anim {
+    0%{background-color: red;}
+    10% {background-color: green;}
+    20% {background-color: blue;}
+    30% {background-color: yellow;}
+    40% {background-color: orange;}
+    50% {background-color: purple;}
+    60% {background-color: brown;}
+    70% {background-color: pink;}
+    80% {background-color: lime;}
+    90% {background-color: cyan;}
+    100% {background-color: teal;}
+}
+
+@keyframes anim {
+    0%{background-color: red;}
+    10% {background-color: green;}
+    20% {background-color: blue;}
+    30% {background-color: yellow;}
+    40% {background-color: orange;}
+    50% {background-color: purple;}
+    60% {background-color: brown;}
+    70% {background-color: pink;}
+    80% {background-color: lime;}
+    90% {background-color: cyan;}
+    100% {background-color: teal;}
+}
+
+@font-face{
+    font-family: 'digital-clock-font';
+    src: url('../img/digital-7.ttf');
+}
+
+html {
+    color: #fff;
+    font: 17px/1.4 termfont, 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color:black;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.greenbtn {
+    border-color: #4CAF50;
+    color: green;
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.greenbtn:hover{
+    color: #4CAF50;
+}
+
+.finalimg {
+    width: 50%;
+}
+
+.victimg {
+    width: 80%;
+}
+
+.redbtn {
+    border-color: #f44336;
+    color: red;
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.redbtn:hover{
+    color: #f44336;
+}
+
+
+.main {
+    background-size: cover;
+    background: url('../img/terminal_improved_resized.png') no-repeat center center;
+    height: 1024px;
+    width: 100%;
+}
+.terminal {
+    margin-left: -250px;
+    background-color: black;
+    width: 500px;
+    height: 380px;
+    position: absolute;
+    top:  220px;
+    left: 50%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    color:green;
+}
+
+.terminal-left {
+    margin-left: -575px;
+    background-color: black;
+    width: 250px;
+    height: 380px;
+    position: absolute;
+    top:  220px;
+    left: 50%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    color:red;
+}
+
+.terminal-right {
+    margin-left: 330px;
+    background-color: black;
+    width: 250px;
+    height: 380px;
+    position: absolute;
+    top:  220px;
+    left: 50%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    color:red;
+}
+
+.terminal-bottom {
+    margin: 0px;
+}
+
+.terminal-date {
+    margin-left: -245px;
+    background-color: black;
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top:  695px;
+    left: 50%;
+    font-family: 'digital-clock-font', serif;
+    line-height: 40px; /* same as height! */
+    font-size: 120%;
+    font-weight: 700;
+    color: green;
+}
+
+.terminal-time {
+    margin-left: 170px;
+    background-color: black;
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top:  695px;
+    left: 50%;
+    font-family: 'digital-clock-font', serif;
+    line-height: 40px; /* same as height! */
+    font-size: 120%;
+    font-weight: 700;
+    color: green;
+}
+
+#countdown {
+    font-size: 30px;
+}
+
+hr {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 2px 1px red;
+    color: red;
+}
+
+input {
+    border-color: red;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.leftimg {
+    margin-top: 50px;
+    width: 80%;
+    opacity: 75%;
+}
+
+.rightimg {
+    width: 100%;
+    height: 100%;
+    opacity: 75%;
+}
+
+h2 {
+    color: red;
+}
+
+h5{
+    color: red;
+}
+
+.loader {
+    color: grey;
+    font-family: sans-serif;
+    height: 5vh;
+    left: 50%;
+    overflow-x: hidden;
+    padding-top: 7vh;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+}
+.loader:before {
+    animation: left-to-right 3s alternate infinite linear;
+    background-image: linear-gradient(to right, transparent, red, transparent);
+    content: "";
+    height: 5vh;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.one{
+    border: none;
+    margin-left: -515px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
+.two{
+    background-color: transparent;
+    border: none;
+    margin-left: -465px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.three{
+    background-color: transparent;
+    border: none;
+    margin-left: -415px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.four{
+    background-color: transparent;
+    border: none;
+    margin-left: -365px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.five{
+    background-color: transparent;
+    border: none;
+    margin-left: -515px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.six{
+    background-color: transparent;
+    border: none;
+    margin-left: -465px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.seven{
+    background-color: transparent;
+    border: none;
+    margin-left: -415px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.eight{
+    background-color: transparent;
+    border: none;
+    margin-left: -365px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.nine{
+    background-color: transparent;
+    border: none;
+    margin-left: 330px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.ten{
+    background-color: transparent;
+    border: none;
+    margin-left: 380px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.eleven{
+    background-color: transparent;
+    border: none;
+    margin-left: 430px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.twelve{
+    background-color: transparent;
+    border: none;
+    margin-left: 480px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.thirteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 330px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.fourteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 380px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.fifteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 430px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+
+}
+.sixteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 480px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+    -webkit-animation: anim 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+
+    animation: anim 3s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
+
+.loader:after {
+    background-image: repeating-linear-gradient(90deg, white, white 1vw, transparent 1vw, transparent 10vw);
+    content: "";
+    height: 5vh;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.fade-in-text {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    animation: fadeIn linear 7s;
+    -webkit-animation: fadeIn linear 7s;
+    -moz-animation: fadeIn linear 7s;
+    -o-animation: fadeIn linear 7s;
+    -ms-animation: fadeIn linear 7s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

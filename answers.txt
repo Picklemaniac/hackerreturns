@@ -40,8 +40,30 @@ Bat out of hell * 3 = t
 Dark side of the moon * 9 = o
 Master of puppets * 9 = p
 
-5. 
+5. Morse code hints towards the buttons you have to press. Press the right buttons and the message gets logged in the console.
 
+.-. ..--- ....- ; .-.. .---- ....- ; .-. .---- ..--- ; .-.. ..--- ..--- ;
+
+KEYLOGGER INITIALIZED
+
+l13 = btn3
+l21 = btn5
+r21 = btn13
+r11 = btn9
+r24 = btn16
+l14 = btn4
+r12 = btn10
+l22 = btn14
+
+
+    // console.log(`  _                    _    _             `);
+    // console.log(` | |                  | |  (_)            `);
+    // console.log(` | |__  _ __ ___  __ _| | ___ _ __   __ _ `);
+    // console.log(` | '_ \\| '__/ _ \\/ _\` | |/ / | '_ \\ / _\` |`);
+    // console.log(` | |_) | | |  __/ (_| |   <| | | | | (_| |`);
+    // console.log(` |_.__/|_|  \\___|\\__,_|_|\\_\\_|_| |_|\\__, |`);
+    // console.log(`                                     __/ |`);
+    // console.log(`                                    |___/ `);
 breaking
 
 6. 

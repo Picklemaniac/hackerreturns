@@ -3,9 +3,14 @@
    Yes, I know it's a mess.
    ========================================================================== */
 
+@font-face{
+    font-family: 'digital-clock-font';
+    src: url('../img/digital-7.ttf');
+}
+
 html {
     color: #fff;
-    font: 17px/1.4 'Open Sans', sans-serif;
+    font: 17px/1.4 termfont, 'Open Sans', sans-serif;
     text-align: center;
 }
 
@@ -28,6 +33,27 @@ img {
 .greenbtn:hover{
     color: #4CAF50;
 }
+
+.finalimg {
+    width: 50%;
+}
+
+.victimg {
+    width: 80%;
+}
+
+.redbtn {
+    border-color: #f44336;
+    color: red;
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.redbtn:hover{
+    color: #f44336;
+}
+
 
 .main {
     background-size: cover;
@@ -78,6 +104,36 @@ img {
     margin: 0px;
 }
 
+.terminal-date {
+    margin-left: -245px;
+    background-color: black;
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top:  695px;
+    left: 50%;
+    font-family: 'digital-clock-font', serif;
+    line-height: 40px; /* same as height! */
+    font-size: 120%;
+    font-weight: 700;
+    color: green;
+}
+
+.terminal-time {
+    margin-left: 170px;
+    background-color: black;
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top:  695px;
+    left: 50%;
+    font-family: 'digital-clock-font', serif;
+    line-height: 40px; /* same as height! */
+    font-size: 120%;
+    font-weight: 700;
+    color: green;
+}
+
 #countdown {
     font-size: 30px;
 }
@@ -85,7 +141,8 @@ img {
 hr {
     border: 0;
     height: 0; /* Firefox... */
-    box-shadow: 0 0 2px 1px green;
+    box-shadow: 0 0 2px 1px red;
+    color: red;
 }
 
 input {
@@ -140,6 +197,168 @@ h5{
     right: 0;
     top: 0;
 }
+
+.one{
+    background-color: transparent;
+    border: none;
+    margin-left: -515px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.two{
+    background-color: transparent;
+    border: none;
+    margin-left: -465px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.three{
+    background-color: transparent;
+    border: none;
+    margin-left: -415px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.four{
+    background-color: transparent;
+    border: none;
+    margin-left: -365px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.five{
+    background-color: transparent;
+    border: none;
+    margin-left: -515px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+.six{
+    background-color: transparent;
+    border: none;
+    margin-left: -465px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+.seven{
+    background-color: transparent;
+    border: none;
+    margin-left: -415px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+.eight{
+    background-color: transparent;
+    border: none;
+    margin-left: -365px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+.nine{
+    background-color: transparent;
+    border: none;
+    margin-left: 330px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.ten{
+    background-color: transparent;
+    border: none;
+    margin-left: 380px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.eleven{
+    background-color: transparent;
+    border: none;
+    margin-left: 430px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.twelve{
+    background-color: transparent;
+    border: none;
+    margin-left: 480px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  710px;
+    left: 50%;
+}
+.thirteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 330px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+.fourteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 380px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+.fifteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 430px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+.sixteen{
+    background-color: transparent;
+    border: none;
+    margin-left: 480px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:  760px;
+    left: 50%;
+}
+
 .loader:after {
     background-image: repeating-linear-gradient(90deg, white, white 1vw, transparent 1vw, transparent 10vw);
     content: "";
@@ -150,6 +369,43 @@ h5{
     right: 0;
     top: 0;
 }
+
+.fade-in-text {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+    animation: fadeIn linear 7s;
+    -webkit-animation: fadeIn linear 7s;
+    -moz-animation: fadeIn linear 7s;
+    -o-animation: fadeIn linear 7s;
+    -ms-animation: fadeIn linear 7s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
 @keyframes left-to-right {
     0% {
         transform: translateX(-100%);

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,11 +13,29 @@
     <script src="js/scramble.js"></script>
     <title>WEEKLY TERMINAL</title>
 </head>
-<body>
+<body onload="startTime()">
     <div class="main" id="main">
         <div class="terminal" id="terminal">
             <h1>WEEKLY CONTROL PANEL</h1>
             <button class="greenbtn" onclick="start()"> [BOOT WEEKLY] </button>
+            <?php
+                if (!isset($_COOKIE['firsttime']))
+                {
+                    setcookie("firsttime", 0);
+                }
+                else
+                {
+                    echo "<button class='greenbtn' onclick='startpuzzle()'>[SKIP INTRO]</button>";
+                }
+            ?>
+        </div>
+        <div class="terminal-date" id="terminal-date">
+
+        </div>
+        <div class="terminal-time" id="terminal-time">
+
+        </div>
+        <div id="ignore">
         </div>
     </div>
 </body>
