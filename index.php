@@ -1,5 +1,6 @@
 <?php
 session_start();
+setcookie("firsttime", 0);
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,11 +20,7 @@ session_start();
             <h1>WEEKLY CONTROL PANEL</h1>
             <button class="greenbtn" onclick="start()"> [BOOT WEEKLY] </button>
             <?php
-                if (!isset($_COOKIE['firsttime']))
-                {
-                    setcookie("firsttime", 0);
-                }
-                else
+                if (isset($_COOKIE['firsttime']))
                 {
                     echo "<button class='greenbtn' onclick='startpuzzle()'>[SKIP INTRO]</button>";
                 }

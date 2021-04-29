@@ -4,6 +4,36 @@
 * It's embarrassingly bad, I am not even kidding.
 */
 
+let img1 = new Image();
+img1.src= "img/1.jpg";
+
+let img2 = new Image();
+img2.src= "img/2.png";
+
+let img3 = new Image();
+img3.src= "img/3.jpg";
+
+let img4 = new Image();
+img4.src= "img/4.jpg";
+
+let img5 = new Image();
+img5.src= "img/blink.gif";
+
+let img6 = new Image();
+img6.src= "img/heisenberg.gif";
+
+let img7 = new Image();
+img7.src= "img/unrelatedeffect.gif";
+
+let img8 = new Image();
+img8.src= "img/btn.gif";
+
+let img9 = new Image();
+img9.src= "img/walk.gif";
+
+let img10 = new Image();
+img10.src= "img/gen.gif";
+
 let time = 120;
 
 const puzzle1_content = `
